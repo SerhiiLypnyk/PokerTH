@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+
+<AnchorPane fx:id="parentAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="600.0" style="-fx-background-color: rgba(0, 0, 0, 0);" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controls.MainTableFormController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="69.0" prefWidth="76.0">
+         <children>
+            <TextField editable="false" prefHeight="25.0" prefWidth="75.0" text="1000" />
+            <TextField editable="false" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0" />
+         </children>
+      </AnchorPane>
+      <Circle fx:id="avatar" fill="DODGERBLUE" layoutX="562.0" layoutY="38.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
+      <AnchorPane layoutX="524.0" layoutY="277.0" prefHeight="75.0" prefWidth="76.0">
+         <children>
+            <VBox prefHeight="76.0" prefWidth="76.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#forDebug" prefHeight="25.0" prefWidth="75.0" text="Check" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Rise" />
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Fold" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Ellipse fill="#1b8020" layoutX="300.0" layoutY="176.0" onMouseDragged="#dragged" onMousePressed="#dragMousePressed" radiusX="300.0" radiusY="176.0" stroke="#587d8a" strokeType="INSIDE" />
+      <Circle fx:id="closeButton" fill="DODGERBLUE" layoutX="462.0" layoutY="14.0" onMouseClicked="#closeForm" radius="13.0" stroke="BLACK" strokeType="INSIDE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Circle>
+      <Circle fill="DODGERBLUE" layoutX="137.0" layoutY="14.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" onMouseClicked="#qwer" />
+      <Circle fx:id="player1" fill="#1b8020" layoutX="30.0" layoutY="176.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player2" fill="#1b8020" layoutX="99.0" layoutY="79.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player3" fill="#1b8020" layoutX="222.0" layoutY="36.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player4" fill="#1b8020" layoutX="373.0" layoutY="36.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player5" fill="#1b8020" layoutX="500.0" layoutY="79.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player6" fill="#1b8020" layoutX="569.0" layoutY="176.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player7" fill="#1b8020" layoutX="500.0" layoutY="275.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player8" fill="#1b8020" layoutX="373.0" layoutY="315.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player9" fill="#1b8020" layoutX="222.0" layoutY="315.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="player10" fill="#1b8020" layoutX="99.0" layoutY="275.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
