@@ -7,9 +7,11 @@ public class Deck {
     private static Random rnd = new Random();
 
     private ArrayList<Card> deck;
+    private int n;
 
     public Deck() {
         deck = new ArrayList<Card>();
+        n = 0;
         refill();
         shuffle();
     }
@@ -39,5 +41,9 @@ public class Deck {
     public void print() {
         for(Card c: deck)
             System.out.println(c);
+    }
+
+    public Card getNextCard() {
+        return deck.get(n++);
     }
 }
