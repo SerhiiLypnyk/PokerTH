@@ -9,5 +9,8 @@
         <module name="PokerTH" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="PokerTH" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
