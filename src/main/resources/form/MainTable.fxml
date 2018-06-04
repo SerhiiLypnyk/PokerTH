@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,18 +21,18 @@
             <VBox prefHeight="102.0" prefWidth="99.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#forDebug" prefHeight="33.0" prefWidth="99.0" text="Check" />
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="101.0" text="Rise" />
-                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="100.0" text="Fold" />
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="101.0" text="Fold" />
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="100.0" text="Rise" />
                </children>
             </VBox>
          </children>
       </AnchorPane>
-      <Ellipse fill="#1b8020" layoutX="373.0" layoutY="252.0" onMouseDragged="#dragged" onMousePressed="#dragMousePressed" radiusX="350.0" radiusY="206.0" stroke="#587d8a" strokeType="INSIDE" />
-      <Circle fx:id="closeButton" fill="DODGERBLUE" layoutX="462.0" layoutY="14.0" onMouseClicked="#closeForm" radius="13.0" stroke="BLACK" strokeType="INSIDE">
+      <Ellipse fill="#1b8020" layoutX="373.0" layoutY="252.0" onMouseClicked="#openscroll" onMouseDragged="#dragged" radiusX="350.0" radiusY="206.0" stroke="#587d8a" strokeType="INSIDE" />
+      <Circle fx:id="closeButton" fill="DODGERBLUE" layoutX="726.0" layoutY="14.0" onMouseClicked="#closeForm" radius="13.0" stroke="BLACK" strokeType="INSIDE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Circle>
-      <Circle fill="DODGERBLUE" layoutX="137.0" layoutY="14.0" onMouseClicked="#qwer" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="DODGERBLUE" layoutX="690.0" layoutY="14.0" onMouseClicked="#qwer" radius="13.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="player1" fill="#1b8020" layoutX="102.0" layoutY="247.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="player2" fill="#1b8020" layoutX="171.0" layoutY="150.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="player3" fill="#1b8020" layoutX="294.0" layoutY="107.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
@@ -92,12 +93,12 @@
             <Image url="@../image/cardback.jpg" />
          </image>
       </ImageView>
-      <Text fontSmoothingType="LCD" layoutX="220.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANK">
+      <Text fontSmoothingType="LCD" layoutX="233.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BANK">
          <font>
             <Font name="Book Antiqua" size="21.0" />
          </font>
       </Text>
-      <TextField layoutX="177.0" layoutY="235.0" />
+      <TextField layoutX="205.0" layoutY="237.0" prefHeight="25.0" prefWidth="121.0" />
       <Text fontSmoothingType="LCD" layoutX="449.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FLOP" wrappingWidth="26.86181640625">
          <font>
             <Font name="Book Antiqua" size="10.0" />
@@ -118,5 +119,276 @@
             <Image url="@../image/diler.png" />
          </image>
       </ImageView>
+      <TextField layoutX="269.0" layoutY="131.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="269.0" layoutY="145.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="274.0" layoutY="69.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="318.0" layoutY="91.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="331.0" layoutY="86.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="247.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="420.0" layoutY="131.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="420.0" layoutY="145.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="425.0" layoutY="69.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="469.0" layoutY="91.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="482.0" layoutY="86.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="398.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="547.0" layoutY="174.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="547.0" layoutY="188.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="552.0" layoutY="112.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="596.0" layoutY="134.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="609.0" layoutY="129.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="525.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="616.0" layoutY="271.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="616.0" layoutY="285.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="621.0" layoutY="209.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="665.0" layoutY="231.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="678.0" layoutY="226.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="594.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="547.0" layoutY="371.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="547.0" layoutY="385.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="552.0" layoutY="309.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="596.0" layoutY="331.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="609.0" layoutY="326.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="525.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="420.0" layoutY="410.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="420.0" layoutY="424.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="425.0" layoutY="348.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="469.0" layoutY="370.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="482.0" layoutY="365.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="398.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="269.0" layoutY="410.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="269.0" layoutY="424.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="274.0" layoutY="348.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="318.0" layoutY="370.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="331.0" layoutY="365.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="247.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="146.0" layoutY="371.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="146.0" layoutY="385.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="151.0" layoutY="309.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="195.0" layoutY="331.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="208.0" layoutY="326.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="77.0" layoutY="271.0" prefHeight="13.0" prefWidth="48.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="77.0" layoutY="285.0" prefHeight="5.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="82.0" layoutY="209.0" prefHeight="7.0" prefWidth="41.0">
+         <font>
+            <Font size="6.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="126.0" layoutY="231.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="26.0" layoutX="139.0" layoutY="226.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/cardback.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="27.0" layoutX="55.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/diler.png" />
+         </image>
+      </ImageView>
+      <Slider layoutX="497.0" layoutY="467.0" showTickLabels="true" showTickMarks="true" />
    </children>
 </AnchorPane>
